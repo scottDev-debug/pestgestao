@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minha Conta | Pet Gestão</title>
+  <link rel="stylesheet" href="style-clientes.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="header">
+    <h1 id="titulo-cliente">🐾 Pet Gestão- Área do Cliente</h1>
+  </header>
+  <ul class="menu" id="menu">
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+  
+    <li><a href="#produtos">Produtos</a></li>
+    <li><a href="#agendamentos">Serviços</a></li>
+    <li><a href="#contato">Contato</a></li>
+   <li><a href="#" id="logout">Sair</a></li>
+  </ul>
+
+  <main class="container">
+    <!-- Pets -->
+    <section class="meus-pets">
+      <h2>🐶 Meu Pet</h2>
+      <ul>
+        <li>Thor - Golden Retriever</li>
+        <li>Luna - Shih-tzu</li>
+      </ul>
+    </section>
+
+    <div id="grade-horarios">
+      <!-- Horários disponíveis aparecem aqui -->
+    </div>
+    
+    <section id="agendamentos">
+      <h2>📅 Meus Agendamentos</h2>
+      <ul class="lista-agendamentos" id="lista-agendamentos"></ul>
+      <button id="btn-novo-agendamento">+ Novo Agendamento</button>
+    </section>
+    
+    <!-- Modal Agendamento -->
+    <div class="modal" id="modal-agendamento">
+      <div class="modal-content">
+        <span class="close" id="fechar-modal-agendamento">&times;</span>
+        <h2>Novo Agendamento</h2>
+        <P>Caso o agendamento seja para outro dia</P>
+        <form id="form-agendamento">
+          <input type="text" id="servico" placeholder="Serviço (ex: banho e tosa)" required />
+          <input type="datetime-local" id="dataHora" required />
+          <button type="submit">Agendar</button>
+        </form>
+      </div>
+    </div>
+    
+
+    <!-- Histórico -->
+    <section class="historico">
+      <h2>📖 Histórico</h2>
+      <ul>
+        <li>Banho - Thor - 10/05</li>
+        <li>Vacina - Luna - 05/05</li>
+      </ul>
+    </section>
+
+    <!-- Pontuação -->
+    <section class="fidelidade">
+      <h2>🎁 Pontos de Fidelidade</h2>
+      <p>Você tem <strong>6</strong> pontos. Faltam <strong>4</strong> para ganhar um banho grátis! 🧼</p>
+    </section>
+
+    <!-- Loja -->
+    <section id="produtos">
+      <h2>🛍 Produtos Disponíveis</h2>
+      <ul class="produtos">
+        <li>
+          <strong>Ração Premium 10kg</strong><br>
+          R$ 89,90 <button>Reservar</button>
+        </li>
+        <li>
+          <strong>Shampoo Pet Neutro</strong><br>
+          R$ 24,90 <button>Reservar</button>
+        </li>
+      </ul>
+    </section>
+
+    <section class="mural">
+      <h2>📸 Mural dos Pets</h2>
+      <div class="galeria" id="galeria">
+        <img src="img/pet1.jpg" alt="Pet 1" />
+        <img src="img/pet2.jpg" alt="Pet 2" />
+        <img src="img/pet3.jpg" alt="Pet 3" />
+      </div>
+      <button id="btn-enviar-foto">Enviar Foto do Meu Pet</button>
+      <input type="file" id="input-foto" accept="image/*" style="display: none;" />
+    </section>
+    <section class="meus-reservas">
+      <h2>🛍 Meus Produtos Reservados</h2>
+      <ul id="lista-reservas"></ul>
+    </section>
+
+    <!-- Promoções -->
+    <section class="promocoes">
+      <h2>💸 Cupons e Promoções</h2>
+      <ul>
+        <li>🐕 10% OFF no banho de segunda-feira</li>
+        <li>🎉 Leve 3 shampoos, pague 2!</li>
+      </ul>
+    </section>
+
+    <!-- Atendimento -->
+    <section id="contato">
+      <h2>📞 Atendimento</h2>
+      <p>Precisa de ajuda? <a href="https://wa.me/5511912345678" target="_blank">Fale conosco no WhatsApp</a></p>
+    </section>
+  </main>
+  <!-- Botão Flutuante do WhatsApp -->
+<a href="https://wa.me/5511912345678?text=Olá!%20Preciso%20de%20ajuda%20com%20o%20Pet%20Gestão." 
+class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
+<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" />
+</a>
+
+
+  <footer>
+    <p>&copy; 2025 Pet Gestão. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script-cliente.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Cliente - Pet Gestão</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body class="cliente">
+    <div class="login-container">
+      <h2>Login - Cliente</h2>
+      <form>
+        <input type="email" placeholder="E-mail" required>
+        <input type="password" placeholder="Senha" required>
+        <button type="submit">Entrar</button>
+
+        <p class="auth-links">
+          <a href="#" onclick="abrirModal('modal-senha')">Esqueceu a senha?</a> |
+          <a href="#" onclick="abrirModal('modal-cadastro')">Cadastre seu pet</a>
+        </p>
+        
+
+      </form>
+
+      <!-- Modal Esqueceu a Senha -->
+<div id="modal-senha" class="modal hidden">
+  <div class="modal-content">
+    <span class="close" onclick="fecharModal('modal-senha')">&times;</span>
+    <h3>Recuperar Senha</h3>
+    <p>Informe seu e-mail:</p>
+    <input type="email" placeholder="Digite seu e-mail" required>
+    <button onclick="alert('Link de recuperação enviado!')">Enviar</button>
+  </div>
+</div>
+
+<!-- Modal Cadastro -->
+<div id="modal-cadastro" class="modal hidden">
+  <div class="modal-content">
+    <span class="close" onclick="fecharModal('modal-cadastro')">&times;</span>
+    <h3>Cadastro</h3>
+    <input type="text" placeholder="Nome completo" required>
+    <input type="tel" placeholder="Telefone" required>
+    <input type="email" placeholder="E-mail" required>
+    <input type="text" placeholder="Nome do pet" required>
+    <input type="text" placeholder="Raça do pet" required>
+    <button onclick="alert('Cadastro enviado com sucesso!')">Cadastrar</button>
+  </div>
+</div>
+
+    </div>
+    
+    <script>
+        const form = document.querySelector('form');
+      
+        form.addEventListener('submit', function(event) {
+          event.preventDefault();
+      
+          // Aqui você pode inserir uma verificação de login (opcional)
+          // Se estiver tudo certo, redireciona para a área do cliente
+      
+          window.location.href = "index-clientes.html"; // Página da área do cliente
+        });
+
+        function abrirModal(id) {
+  document.getElementById(id).classList.remove('hidden');
+}
+
+function fecharModal(id) {
+  document.getElementById(id).classList.add('hidden');
+}
+
+      </script>
+  </body>
+  
+</html>

@@ -1,0 +1,144 @@
+/* ======= RESET ======= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* ======= CONTAINER DE LOGIN ======= */
+  .login-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .login-container h2 {
+    margin-bottom: 24px;
+    font-size: 28px;
+    color: var(--titulo-color);
+  }
+  
+  /* ======= CAMPOS ======= */
+  form input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+  
+  form input:focus {
+    border-color: var(--destaque-color);
+    outline: none;
+  }
+  
+  /* ======= BOTÃO ======= */
+  form button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--destaque-color);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  
+  form button:hover {
+    background-color: var(--destaque-hover);
+  }
+  
+  /* ======= VARIÁVEIS CLIENTE ======= */
+  body.cliente {
+    --destaque-color: #4CAF50;
+    --destaque-hover: #45a049;
+    --titulo-color: #333;
+  }
+  
+  /* ======= VARIÁVEIS ADMIN ======= */
+  body.admin {
+    --destaque-color: #1E88E5;
+    --destaque-hover: #1565C0;
+    --titulo-color: #222;
+  }
+  
+
+  .auth-links {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .auth-links a {
+    color: #008080;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 600;
+  }
+  
+  .auth-links a:hover {
+    color: #ffcc00;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .modal-content input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+  }
+  
+  .modal-content button {
+    margin-top: 10px;
+    padding: 10px 20px;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 24px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  

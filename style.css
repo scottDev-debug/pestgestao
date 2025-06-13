@@ -1,0 +1,875 @@
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.btn-primario {
+  background: linear-gradient(90deg, #008080, #00b3b3);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 128, 128, 0.3);
+}
+
+.btn-primario:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 128, 128, 0.4);
+}
+
+.btn-secundario {
+  background-color: white;
+  color: #008080;
+  border: 2px solid #008080;
+  padding: 10px 22px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn-secundario:hover {
+  background-color: #008080;
+  color: white;
+}
+
+
+/* Modal Teste Grátis */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.modal-content h2 {
+  color: #008080;
+  margin-top: 0;
+}
+
+.modal-content p {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.modal-content input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.modal-content button {
+  background-color: #008080;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.modal-content button:hover {
+  background-color: #006666;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5em;
+  color: #333;
+  cursor: pointer;
+}
+
+
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+header {
+  background-color: #008080;
+  color: white;
+  padding: 20px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 32px;         /* Maior e mais visível */
+  font-weight: 600;        /* Peso correto (30 é inválido) */
+  text-align: center;      /* Centraliza o texto dentro da div */
+  color: #f7f7f7;          /* Cor verde suave, pode personalizar */
+  font-family: 'Poppins', sans-serif;
+  margin: 0 auto;          /* Centraliza horizontalmente caso a div tenha largura menor */
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  background: #e0f7f7;
+  padding: 60px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-text h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #008080;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.hero-img-left, .hero-img-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-text {
+  flex: 2;
+  text-align: center;
+}
+
+.hero-img-left img, .hero-img-right img {
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .hero .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero-text {
+    order: 2;
+  }
+
+  .hero-img-left, .hero-img-right {
+    order: 1;
+  }
+
+  .hero-img-left img, .hero-img-right img {
+    max-width: 90%;
+  }
+}
+
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.produtos .grid, .servicos .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.produto-card, .servico-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.produto-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 2em;
+  color: #008080;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea, button {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+form label {
+  text-align: left;
+  font-weight: 600;
+  color: #008080;
+}
+
+button {
+  background-color: #008080;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .hero .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Transições suaves para links e botões */
+.menu li a,
+.btn,
+button {
+  transition: all 0.3s ease;
+}
+
+/* Hover nos links do menu */
+.menu li a:hover {
+  color: #ffcc00;
+}
+
+/* Hover no botão */
+.btn:hover,
+button:hover {
+  background-color: #006666;
+  transform: scale(1.05);
+}
+
+/* Transição nos cards */
+.produto-card, .servico-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito hover nos cards */
+.produto-card:hover, .servico-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(2, 70, 255, 0.1);
+}
+
+/* Animação de fade-in */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Aplicando nos blocos principais */
+.hero-text, .hero-img,
+.produto-card, .servico-card,
+#sobre, #contato form {
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+/* Botão do menu hambúrguer */
+.menu-toggle {
+  display: none;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+/* Estilo quando o menu está ativo */
+.menu.active {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #008080;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #008080;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+.auth-buttons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.auth-buttons button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffcc00;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.auth-buttons button:hover {
+  background-color: #ffaa00;
+}
+
+/* Modal base */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  text-align: left;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  color: #008080;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-content input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.modal-content button {
+  background-color: #008080;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #006666;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5em;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Funcionalidades */
+.funcionalidades {
+  background: #fff;
+  padding: 60px 20px;
+}
+
+.funcionalidades h2 {
+  color: #008080;
+  margin-bottom: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 128, 128, 0.1);
+}
+
+.card h3 {
+  color: #008080;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+/* Como Funciona */
+.como-funciona {
+  background-color: #e0f7f7;
+  padding: 60px 20px;
+}
+
+.como-funciona h2 {
+  color: #008080;
+  margin-bottom: 30px;
+}
+
+.steps {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  list-style: none;
+  padding-left: 0;
+}
+
+.steps li {
+  background: #ffffff;
+  border-left: 5px solid #008080;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* Responsivo extra */
+@media (max-width: 768px) {
+  .auth-buttons {
+    position: static;
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .steps {
+    padding: 0 10px;
+  }
+}
+.animacao-img {
+  width: 100%;
+  max-width: 500px;
+  animation: flutuar 3s ease-in-out infinite;
+  transition: transform 0.3s;
+}
+
+@keyframes flutuar {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Efeito de zoom ao passar o mouse */
+.animacao-img:hover {
+  transform: scale(1.05);
+}
+
+/* Seção de Planos */
+.planos {
+  background-color: #f9f9f9; /* tom suave de fundo */
+  padding: 60px 20px;
+}
+
+.planos .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.planos h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+  font-weight: 600;
+}
+
+.planos .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.planos .card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 30px 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.planos .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.planos .card h3 {
+  font-size: 1.5rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.planos .card p {
+  font-size: 1.25rem;
+  color: #007BFF; /* azul mais forte para destaque */
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.planos .card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.planos .card ul li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+  font-size: 1rem;
+  color: #555;
+}
+
+.planos .card ul li::before {
+  position: absolute;
+  left: 0;
+  color: #28a745;
+}
+
+@keyframes pulse {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.03);}
+  100% {transform: scale(1);}
+}
+
+.planos .card.destacado {
+  animation: pulse 2s infinite;
+}
+
+.garantia-objecoes {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.garantia-objecoes h2 {
+  color: #008080;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.garantia-objecoes p {
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+}
+
+.grid-garantia {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.card-garantia {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.card-garantia:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 128, 128, 0.15);
+}
+
+.card-garantia h3 {
+  color: #008080;
+  margin-bottom: 10px;
+}
+
+.cta-garantia {
+  margin-top: 40px;
+}
+
+.cta-garantia button {
+  padding: 12px 24px;
+  border-radius: 50px;
+}
+
+.cta-garantia p {
+  margin-top: 10px;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+
+.ancoragem {
+  background-color: #e0f7f7;
+  padding: 30px 20px;
+  border-top: 2px solid #008080;
+  border-bottom: 2px solid #008080;
+}
+
+.ancoragem p {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 500;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.oferta-limitada {
+  background-color: #f3f3f1;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.oferta-limitada .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+#servicos-adicionais {
+  background-color: #e0f7f7;
+  padding: 60px 20px;
+  border-radius: 8px;
+}
+
+#servicos-adicionais h2 {
+  color: #008080;
+  margin-bottom: 20px;
+}
+
+#servicos-adicionais ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#servicos-adicionais li {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  color: #555;
+}
+
+#depoimentos {
+  background-color: #fff;
+  padding: 60px 20px;
+}
+
+#depoimentos h2 {
+  color: #008080;
+  margin-bottom: 30px;
+}
+
+#depoimentos .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+#depoimentos .card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+#depoimentos .card p {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+#depoimentos .card strong {
+  color: #333;
+  font-weight: 600;
+}
+
+.valor-ancoragem {
+  background-color: #e0f7f7;
+  border-left: 4px solid #008080;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #444;
+}
+
+
+.badge-teste-gratis {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 0.75rem;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.badge-popular {
+  background: linear-gradient(90deg, #FF7E5F, #FD3A69);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(253, 58, 105, 0.4);
+  margin-bottom: 10px;
+}
+
+.desconto-anual {
+  font-size: 0.9rem;
+  color: #FF9800;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.card.destacado {
+  border: 2px solid #2196F3;
+  box-shadow: 0 8px 20px rgba(33, 150, 243, 0.2);
+  transform: scale(1.03);
+}
+

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Painel Administrativo | Pet Gestão</title>
+  <link rel="stylesheet" href="dashboardadmin.css" />
+ 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <h2>Pet Gestão Admin </h2>
+      <ul>
+        <li><a href="#resumo">Resumo</a></li>
+        <li><a href="#clientes">Clientes</a></li>
+        <li><a href="#agendamentos">Agendamentos</a></li>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="index.html">Sair</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <section id="resumo">
+        <h2>📊 Resumo</h2>
+        <div class="grid-dashboard">
+          <div class="card-dashboard">🐕 Total de Pets: <strong>32</strong></div>
+          <div class="card-dashboard">👤 Clientes: <strong>18</strong></div>
+          <div class="card-dashboard">📅 Agendamentos: <strong>12 hoje</strong></div>
+          <div class="card-dashboard">🛒 Produtos ativos: <strong>27</strong></div>
+        </div>
+      </section>
+
+      <section id="clientes">
+        <h2>👤 Clientes</h2>
+        <p>Lista de clientes cadastrados:</p>
+        <button id="btn-novo-cliente">+ Novo Cliente</button>
+        <input type="text" id="filtro-clientes" placeholder="🔍 Buscar por nome ou email..." />
+        <table class="tabela-admin" id="tabela-clientes">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Email</th>
+              <th>Telefone</th>
+              <th>Pet (Raça)</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="lista-clientes">
+            <!-- clientes adicionados dinamicamente -->
+          </tbody>
+        </table>
+      </section>
+
+      <div class="modal" id="modal-cliente">
+        <div class="modal-content">
+          <span class="close" id="fechar-modal-cliente">&times;</span>
+          <h2 id="titulo-modal-cliente">Detalhes do Cliente</h2>
+          <form id="form-cliente">
+            <input type="text" id="nome-cliente" placeholder="Nome" required />
+            <input type="email" id="email-cliente" placeholder="Email" required />
+            <input type="tel" id="telefone-cliente" placeholder="Telefone" required />
+            <input type="text" id="pet-cliente" placeholder="Pet (ex: Thor - Golden)" required />
+            <input type="hidden" id="id-cliente" />
+            <button type="submit">Salvar</button>
+          </form>
+        </div>
+      </div>
+
+      <section id="agendamentos">
+        <div id="grade-horarios">
+          <!-- os horários vão ser gerados pelo JavaScript -->
+        </div>
+        <h2>📅 Agendamentos</h2>
+        <p>Agenda de hoje:</p>
+        <button id="btn-novo-agendamento">+ Novo Agendamento</button>
+        <ul class="lista-agendamentos" id="lista-agendamentos">
+          <!-- agendamentos listados aqui -->
+        </ul>
+      </section>
+      
+      
+      
+      <!-- Modal Agendamento -->
+      <div class="modal" id="modal-agendamento">
+        <div class="modal-content">
+          <span class="close" id="fechar-modal-agendamento">&times;</span>
+          <h2>Novo Agendamento</h2>
+          <form id="form-agendamento">
+            <input type="text" id="cliente" placeholder="Nome do cliente" required />
+            <input type="text" id="pet" placeholder="Nome do pet" required />
+            <input type="text" id="servico" placeholder="Serviço (ex: banho e tosa)" required />
+            <input type="datetime-local" id="dataHora" required />
+            <button type="submit">Agendar</button>
+          </form>
+        </div>
+      </div>
+      
+
+      <section id="produtos">
+        <h2>🛍 Produtos</h2>
+        <p>Gerencie os produtos da loja.</p>
+        <button id="btn-novo-produto">+ Novo Produto</button>
+        <ul class="lista-produtos" id="lista-produtos">
+          <!-- produtos listados dinamicamente -->
+        </ul>
+      </section>
+      
+      <!-- Modal de Cadastro de Produto -->
+      <div class="modal" id="modal-produto">
+        <div class="modal-content">
+          <span class="close" id="fechar-modal">&times;</span>
+          <h2 id="titulo-modal">Novo Produto</h2>
+          <form id="form-produto">
+            <input type="select" id="nome" placeholder="Nome do produto" required />
+            <input type="number" id="preco" placeholder="Preço (ex: 89.90)" required />
+            <input type="select" id="categoria" placeholder="Categoria (ex: Ração)" required />
+            <input type="hidden" id="id-produto" />
+            <button type="submit">Salvar</button>
+          </form>
+        </div>
+      </div>
+      
+</body>
+<script src="dashboardadmin.js"></script>
+</html>

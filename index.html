@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pet Gestão - Seu Petshop Digital</title>
+  <meta name="description" content="O Pet Gestão é um sistema completo para petshops
+  . Gestão de clientes, agendamentos, produtos e área exclusiva para tutores.">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="logo"><h1>Pet Gestão</h1></div>
+    <nav>
+      <ul class="menu">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#funcionalidades">Funcionalidades</a></li>
+        <li><a href="#como-funciona">Como Funciona</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="auth-buttons">
+      <a href="cliente-login.html"><button>Área do Cliente</button></a>
+      <a href="admin-login.html"><button>Área do Petshop</button></a>
+    </div>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="container">
+      <div class="hero-img-left">
+        <img src="petcapa2.png" alt="Dashboard Cachorrinho" class="animacao-img" loading="lazy">
+      </div>
+      
+      <div class="hero-text">
+        <h2>Simplifique a gestão do seu Petshop</h2>
+        <p>Com o Pet Gestão, você organiza seus agendamentos, produtos e clientes em um só lugar — e ainda oferece um painel exclusivo para os tutores.</p>
+        <div class="botoes-hero">
+          <button class="btn-primario" onclick="abrirModal()">Começar Teste Grátis 🚀</button>
+          <a href="#funcionalidades" class="btn-secundario">Conheça os Recursos</a>
+        </div>
+      </div>
+      
+      <div class="hero-img-right">
+        <img src="petcapa.png" alt="Dashboard Gatinho" class="animacao-img" loading="lazy">
+      </div>
+      
+  </section>
+
+  <section id="funcionalidades" class="funcionalidades">
+    <div class="container">
+      <h2>O que o Pet Gestão faz por você</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>📅 Agendamentos Inteligentes</h3>
+          <p>Cadastre, edite e visualize os agendamentos dos pets com facilidade e organização.</p>
+        </div>
+        <div class="card">
+          <h3>👤 Gestão de Clientes</h3>
+          <p>Armazene informações dos tutores, pets, histórico de serviços e fidelidade.</p>
+        </div>
+        <div class="card">
+          <h3>🛒 Catálogo de Produtos</h3>
+          <p>Adicione produtos, organize por categorias e deixe tudo visível para o cliente reservar.</p>
+        </div>
+        <div class="card">
+          <h3>🎁 Pontuação e Promoções</h3>
+          <p>Sistema de fidelidade com pontos e promoções automáticas para seus clientes.</p>
+        </div>
+        <div class="card">
+          <h3>📸 Mural de Fotos</h3>
+          <p>O cliente pode enviar fotos dos seus pets e compartilhar momentos com o petshop.</p>
+        </div>
+        <div class="card">
+          <h3>💬 Integração com WhatsApp</h3>
+          <p>Atenda seus clientes diretamente por WhatsApp com links automáticos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="como-funciona" class="como-funciona">
+    <div class="container">
+      <h2>Como funciona</h2>
+      <ol class="steps">
+        <li><strong> Cadastro:</strong> Crie sua conta como petshop e comece a configurar seus serviços.</li>
+        <li><strong>Personalize:</strong> Adicione seus produtos, horários, pets e equipe.</li>
+        <li><strong>Convide clientes:</strong> Seus clientes acessam a área exclusiva e acompanham tudo.</li>
+        <li><strong>Gerencie:</strong> Tudo pelo painel web, de forma simples e intuitiva.</li>
+      </ol>
+      <a href="#contato" class="btn">Quero Saber Mais</a>
+    </div>
+  </section>
+
+  <section class="ancoragem">
+    <div class="container">
+      <p>
+        💡 <strong>Quanto custa não ter um sistema?</strong><br>
+        Perda de clientes, agenda bagunçada e dinheiro escorrendo por falta de organização.<br>
+        <strong>Por menos que uma ração premium por mês, você profissionaliza seu petshop!</strong>
+      </p>
+    </div>
+  </section>
+
+  <section id="planos" class="planos">
+    <div class="container">
+      <h2>Planos e Valores</h2>
+      <p class="oferta-limitada">
+        ⚡ Oferta especial: Assine até o fim do mês e ganhe <strong>2 mêses grátis no plano anual!</strong>
+      </p>
+      
+      <div class="grid">
+
+        <!-- Plano Básico -->
+        <div class="card">
+          <span class="badge-teste-gratis">🎁 7 dias grátis</span>
+          <h3>Plano Básico</h3>
+          <p class="preco">R$ 29/mês</p>
+          <p class="desconto-anual">💰 Economize 2 meses no anual</p>
+          <ul>
+            <li>Cadastro de clientes e pets</li>
+            <li>Agenda de serviços</li>
+            <li>Painel administrativo</li>
+            <li>Integração com WhatsApp</li>
+          </ul>
+          <div class="garantia">
+            ✅ Sem compromisso. Cancele quando quiser.
+          </div>
+          <button class="btn-primario" onclick="abrirModal()">Testar Agora 🚀</button>
+        </div>
+      
+        <!-- Plano Intermediário (Mais Vendido) -->
+        <div class="card destacado">
+          <span class="badge-popular">🔥 Mais Vendido</span>
+          <span class="badge-teste-gratis">🎁 7 dias grátis</span>
+          <h3>Plano Intermediário</h3>
+          <p class="preco">R$ 49/mês</p>
+          <p class="desconto-anual">💰 Economize 2 meses no anual</p>
+          <ul>
+            <li>Tudo do Básico</li>
+            <li>Catálogo de produtos</li>
+            <li>Promoções e fidelidade</li>
+            <li>Mural de fotos dos pets</li>
+          </ul>
+          <div class="garantia">
+            ✅ Sem risco. Cancele quando quiser.
+          </div>
+          <button class="btn-primario" onclick="abrirModal()">Testar Agora 🚀</button>
+        </div>
+      
+        <!-- Plano Avançado -->
+        <div class="card">
+          <span class="badge-teste-gratis">🎁 7 dias grátis</span>
+          <h3>Plano Avançado</h3>
+          <p class="preco">R$ 89/mês</p>
+          <p class="desconto-anual">💰 Economize 2 meses no anual</p>
+          <ul>
+            <li>Tudo do Intermediário</li>
+            <li>Relatórios financeiros</li>
+            <li>Gestão de equipe</li>
+            <li>Envio automático de lembretes</li>
+          </ul>
+          <div class="garantia">
+            ✅ Ativação imediata. Cancele quando quiser.
+          </div>
+          <button class="btn-primario" onclick="abrirModal()">Testar Agora 🚀</button>
+        </div>
+      
+        <!-- Plano Premium -->
+        <div class="card">
+          <span class="badge-teste-gratis">🎁 7 dias grátis</span>
+          <h3>Plano Premium</h3>
+          <p class="preco">R$ 99/mês</p>
+          <p class="desconto-anual">💰 Economize 2 meses no anual</p>
+          <ul>
+            <li>Tudo do Avançado</li>
+            <li>Customização de cores e logo</li>
+            <li>Suporte prioritário</li>
+            <li>Treinamento online personalizado</li>
+          </ul>
+          <div class="garantia">
+            ✅ Suporte prioritário. Cancele quando quiser.
+          </div>
+          <button class="btn-primario" onclick="abrirModal()">Testar agora 🚀</button>
+        </div>
+      
+      </div>
+      
+  </section>
+
+  <section class="garantia-objecoes">
+    <div class="container">
+      <h2>🎯 Sua segurança vem em primeiro lugar</h2>
+      <p>Nosso compromisso é com sua satisfação total. Por isso, oferecemos uma garantia sem riscos e suporte dedicado. Confira:</p>
+  
+      <div class="grid-garantia">
+        <div class="card-garantia">
+          <h3>💯 Garantia de Satisfação</h3>
+          <p>Teste o <strong>Pet Gestão</strong> por <strong>7 dias grátis</strong>. Se não gostar, cancele sem pagar nada. Sem contrato, sem pegadinhas.</p>
+        </div>
+  
+        <div class="card-garantia">
+          <h3>💻 Suporte Humanizado</h3>
+          <p>Ficou com dúvida? Nosso time responde direto no WhatsApp, sem robôs e sem filas. Aqui você fala com pessoas reais.</p>
+        </div>
+  
+        <div class="card-garantia">
+          <h3>🚀 Simples e Intuitivo</h3>
+          <p>Se você sabe usar WhatsApp, você sabe usar o <strong>Pet Gestão</strong>. O sistema foi pensado para ser fácil, rápido e descomplicado.</p>
+        </div>
+  
+        <div class="card-garantia">
+          <h3>✅ Sem Risco, Sem Burocracia</h3>
+          <p>Sem taxa de adesão. Sem multas. Sem contrato obrigatório. Você fica com a gente se realmente amar a experiência.</p>
+        </div>
+      </div>
+  
+      <div class="cta-garantia">
+        <button class="btn-primario" onclick="abrirModal()">Quero Testar Grátis 🚀</button>
+        <p>🎁 Ative agora seu teste grátis. Sem compromisso. Cancele quando quiser.</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <section id="servicos-adicionais">
+    <div class="container">
+      <h2>Serviços Adicionais</h2>
+      <ul>
+        <li>🎨 Personalização do sistema (cores, logo) — R$ 199</li>
+        <li>🚀 Treinamento online personalizado — R$ 149</li>
+        <li>📊 Consultoria para gestão de petshops — R$ 249</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="depoimentos">
+    <div class="container">
+      <h2>O que nossos clientes dizem</h2>
+      <div class="grid">
+        <div class="card">
+          <p>"Com o Pet Gestão, aumentamos nossos agendamentos em 40%! É indispensável."</p>
+          <strong>— Ana, Pet Feliz</strong>
+        </div>
+        <div class="card">
+          <p>"Simples, intuitivo e muito eficiente. Nossos clientes também amaram."</p>
+          <strong>— Bruno, Pet&Cia</strong>
+        </div>
+        <div class="card">
+          <p>"Era tudo no papel... hoje é tudo digital e organizado. Salvou meu petshop."</p>
+          <strong>— Carla, Mundo Pet</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <section id="contato">
+    <div class="container">
+      <h2>Fale com a gente</h2>
+      <p>Tem dúvidas? Quer saber mais? Entre em contato conosco.</p>
+      <form onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso!');">
+        <input type="text" placeholder="Seu nome" required>
+        <input type="email" placeholder="Seu e-mail" required>
+        <input type="tel" placeholder="Seu Telefone" required>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Pet Gestão - Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+
+  <!-- Modal Teste Grátis -->
+<div id="modal-teste" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="fecharModal()">&times;</span>
+    <h2>Comece seu Teste Grátis 🚀</h2>
+    <p>Preencha seus dados e comece agora mesmo a testar o Pet Gestão por 7 dias grátis.</p>
+    <form onsubmit="enviarFormulario(event)">
+      <input type="text" placeholder="Seu nome" required>
+      <input type="email" placeholder="Seu e-mail" required>
+      <input type="tel" placeholder="Seu telefone" required>
+      <button type="submit">Iniciar Teste Grátis</button>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
