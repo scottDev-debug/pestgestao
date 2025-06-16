@@ -370,38 +370,28 @@ button:hover {
   padding: 10px 20px;
 }
 
-/* Estilo quando o menu está ativo */
-.menu.active {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  background-color: #008080;
-  position: absolute;
-  top: 60px;
-  right: 20px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
-
 @media (max-width: 768px) {
-  .menu {
-    display: none;
-    flex-direction: column;
-    gap: 20px;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: #008080;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  .menu-toggle {
+    display: block; /* só aparece no mobile */
   }
 
-  .menu-toggle {
-    display: block;
+  .menu {
+    display: none; /* esconde o menu no mobile por padrão */
+    flex-direction: column;
+    background-color: #008080;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    z-index: 1000;
+  }
+
+  .menu.active {
+    display: flex; /* aparece quando clicado */
   }
 }
+
 
 .auth-buttons {
   position: absolute;
@@ -873,3 +863,26 @@ button:hover {
   transform: scale(1.03);
 }
 
+.modal-content {
+  max-height: 90vh;
+  overflow-y: auto;
+}
+@media (max-width: 768px) {
+  .hero-text { font-size: 1.2rem; }
+  .menu { flex-direction: column; }
+}
+
+.steps {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.steps li {
+  background: #ffffff;
+  border-left: 5px solid #008080;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  font-size: 1rem;
+}
